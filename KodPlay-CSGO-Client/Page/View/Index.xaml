@@ -1,0 +1,193 @@
+﻿<ui:UiPage  xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" x:Class="KodPlay_CSGO_Client.Index"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:gif="http://wpfanimatedgif.codeplex.com"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:KodPlay_CSGO_Client"
+      mc:Ignorable="d" 
+      d:DesignHeight="5050" d:DesignWidth="1152"
+      Title="Index" Scrollable="True" Background="#212122">
+    <VirtualizingStackPanel IsVirtualizing="True" >
+        <StackPanel>
+            <Grid Height="850">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image gif:ImageBehavior.AnimatedSource="/Resources/App/Index/ezgif.com-gif-maker.gif"  Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="UniformToFill" />
+                    
+                    <Image Source="/Resources/App/Index/Person.png" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Bottom" />
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0">
+                        <TextBlock Text="KodPlay正在为你开放 \ > 欢迎回来 THE Your Name" FontFamily="HarmonyOS Sans Black" FontSize="48" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Width="620">
+                            <TextBlock.Foreground>
+                                <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                                    <GradientStop Color="#43CBFF"/>
+                                    <GradientStop Color="#8C1BAB" Offset="1"/>
+                                </LinearGradientBrush>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                        <TextBlock Text="KodPlay社区能给用户带来更强的反作弊、更好128tick服务器、以及势均力敌的对手.无门槛，人少，容易被当鱼苗，较好的反作弊+监管系统，优异反作弊" FontFamily="HarmonyOS Sans Black" Foreground="#FFC5C5C5" TextWrapping="Wrap"/>
+                        <StackPanel Orientation="Horizontal" Margin="25,0,0,0">
+                            <ui:Button Content="快速启动" Icon="Open16" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,35,0,0" FontFamily="Cascadia Code" FontWeight="Bold" FontSize="16" Background="#FFFDFDFD" Foreground="#FF060606" IconForeground="Black" Width="145" Height="45" />
+                            <Button Width="145" Height="45"  Content="加入聊群" FontFamily="Cascadia Code" FontWeight="Bold" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,35,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!--启动数据统计-->
+                    <StackPanel Orientation="Horizontal" Grid.Row="1" Height="80" VerticalAlignment="Top">
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="195">
+                            <TextBlock Text="3,149" FontFamily="Dubai Medium" FontSize="24" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" TextAlignment="Center">
+                                <TextBlock.Foreground>
+                                    <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                                        <GradientStop Color="#5EFCE8"/>
+                                        <GradientStop Color="#736EFE" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                            <TextBlock Text="USERS" FontFamily="Cascadia Code" Foreground="DarkGray" TextAlignment="Center"/>
+
+                        </StackPanel>
+                        <Separator Height="39" HorizontalAlignment="Center" VerticalAlignment="Top" Background="DarkGray" Foreground="#FF481212" BorderBrush="#FF8A8A8A" Margin="0,7,0,0"/>
+
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="195">
+                            <TextBlock Text="6,931" FontFamily="Dubai Medium" FontSize="24" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Width="195" TextAlignment="Center">
+                                <TextBlock.Foreground>
+                                    <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                                        <GradientStop Color="#5EFCE8"/>
+                                        <GradientStop Color="#736EFE" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                            <TextBlock Text="TRANCTIONS" FontFamily="Cascadia Code" Foreground="DarkGray" TextAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+
+
+                </Grid>
+                <!--下半部分Index过渡位-->
+                 <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+
+                    <!--<TextBlock Text="社区服务支持伙伴" Foreground="Gray" FontFamily="Microsoft YaHei UI" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="4"/>-->
+                    <Grid Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="https://game.kodplay.com/wp-content/uploads/2022/04/%E5%89%AF%E6%9C%AC_%E5%89%AF%E6%9C%AC_%E5%89%AF%E6%9C%AC_%E6%9C%AA%E5%91%BD%E5%90%8D_%E8%87%AA%E5%AE%9A%E4%B9%89px_2022-04-1915_58_29.png" Grid.Column="0" Grid.Row="0" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                        <Image Source="https://game.kodplay.com/wp-content/uploads/2022/04/%E5%89%AF%E6%9C%AC_%E5%89%AF%E6%9C%AC_%E5%89%AF%E6%9C%AC_%E6%9C%AA%E5%91%BD%E5%90%8D_%E8%87%AA%E5%AE%9A%E4%B9%89px_2022-04-1915_58_29.png" Grid.Column="2" Grid.Row="0" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <!--<Image Source="/Resources/App/Index/2.png" Grid.Column="1" Grid.Row="0" Width="200" Height="200" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Image Source="/Resources/App/Index/3.png" Grid.Column="2" Grid.Row="0" Width="200" Height="200" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Image Source="/Resources/App/Index/4.png" Grid.Column="3" Grid.Row="0" Width="200" Height="200" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
+                        <!--<Image Source="/Resources/App/Index/OtherJoin/mode3.jpg" Grid.Row="1"/>-->
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <!--FlashBang Dance-->
+            <Grid Height="700">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/Resources/App/Index/bg1.png" Stretch="Uniform" Opacity="0.2"/>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="12*"/>
+                </Grid.RowDefinitions>
+                <!--上方文字排版-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="FlashBang Dance Time" FontFamily="HarmonyOS Sans Black" FontWeight="Bold" FontSize="36" Foreground="#FF444352" Margin="20,0,0,0"/>
+                    <ui:Button Content="精彩时刻" FontFamily="Microsoft YaHei UI"   DockPanel.Dock="Right" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,50,0"/>
+                </Grid>
+                <!--下方海报排版-->
+                <Grid Grid.Row="1" Margin="0,55,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--第一位置海报-->
+                    <Image Source="/Resources/App/Index/FhNp-fFXEAM9Aep.jfif" StretchDirection="UpOnly" HorizontalAlignment="Center" VerticalAlignment="Top" Opacity="0.8" Stretch="None" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="0.9"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50">
+                        <TextBlock Text="CSGO - 2022 里约 ESL Pro League " FontFamily="Microsoft YaHei UI" TextWrapping="Wrap" Foreground="White" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                        <TextBlock Text="OFFSET apresentam asus equipa de CSGO" FontFamily="HarmonyOS Sans Medium" TextWrapping="Wrap" Foreground="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" HorizontalAlignment="Left" Margin="0,10,0,0" FontSize="16"/>
+                        <TextBlock Text="查看详情" FontFamily="Microsoft YaHei UI" TextWrapping="Wrap" FontSize="16" HorizontalAlignment="Left" Margin="0,10,0,0" Foreground="#FF126CAA"/>
+                    </StackPanel>
+
+                    <!--第二位置海报-->
+                    <Image Source="/Resources/App/Index/FkQ1pIXXEAIt_kp.jfif" Stretch="None" StretchDirection="UpOnly" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.8" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="0.9"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,-25">
+                        <TextBlock Text="CSGO - 2022 里约 ESL Pro League " FontFamily="Microsoft YaHei UI" TextWrapping="Wrap" Foreground="White" FontSize="24" HorizontalAlignment="Center"/>
+                        <TextBlock Text="OFFSET apresentam asus equipa de CSGO" FontFamily="HarmonyOS Sans Medium" TextWrapping="Wrap" Foreground="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" FontSize="16" HorizontalAlignment="Left" Margin="0,10,0,0"/>
+                        <TextBlock Text="查看详情" FontFamily="Microsoft YaHei UI" TextWrapping="Wrap" FontSize="16" HorizontalAlignment="Left" Margin="0,10,0,0" Foreground="#FF126CAA"/>
+                    </StackPanel>
+
+
+                    <!--第三位置海报-->
+                    <Image Source="/Resources/App/Index/FhT9r60aAAEG2Xy.jfif" StretchDirection="UpOnly" HorizontalAlignment="Center" VerticalAlignment="Top" Opacity="0.8" Grid.Column="2" Stretch="None" RenderTransformOrigin="0.5,0.5" Margin="0,30,0,0">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="0.9" ScaleY="1.15"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="2" Margin="0,0,0,50">
+                        <TextBlock Text="CSGO - 2022 里约 ESL Pro League " FontFamily="Microsoft YaHei UI" TextWrapping="Wrap" Foreground="White" FontSize="24" HorizontalAlignment="Center"/>
+                        <TextBlock Text="OFFSET apresentam asus equipa de CSGO" FontFamily="HarmonyOS Sans Medium" TextWrapping="Wrap" Foreground="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" FontSize="16" HorizontalAlignment="Left" Margin="0,10,0,0"/>
+                        <TextBlock Text="查看详情" FontFamily="Microsoft YaHei UI" TextWrapping="Wrap" FontSize="16" HorizontalAlignment="Left" Margin="0,10,0,0" Foreground="#FF126CAA"/>
+                    </StackPanel>
+
+
+
+                </Grid>
+            </Grid>
+
+
+            <Grid Height="1000" Margin="0,70,0,0">
+                
+            </Grid>
+        </StackPanel>
+    </VirtualizingStackPanel>
+
+</ui:UiPage>
