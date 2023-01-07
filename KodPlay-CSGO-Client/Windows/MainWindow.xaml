@@ -40,37 +40,24 @@
                     Content="玩"
                     Icon="Games16"
                     Tag="tm_performance"
-                    PageType="{x:Type local:Start}" Cursor="Hand"/>
+                    PageType="{x:Type local:Server}" Cursor="Hand"
+                    />
                 <ui:NavigationItem
-                    Content="App history"
-                    Icon="History24"
+                    Content="商城"
+                    Icon="ShoppingBagArrowLeft20"
+                    IconFilled="True"
+                    PageTag="tm_services"
+                    />
+                <ui:NavigationItem
+                    Content="用户数据"
+                    Icon="Person12"
                     PageTag="tm_app_history"
                      />
                 <ui:NavigationItem
-                    Content="Chat"
-                    Icon="Chat16"
-                    PageTag="tm_chat" Cursor="Hand"
-                    />
-                <ui:NavigationItem
-                    Content="Users"
-                    Icon="People24"
-                    PageTag="tm_users"
-                    />
-                <ui:NavigationItem
-                    Content="Details"
-                    Icon="TextBulletListLtr24"
+                    Content="社区"
+                    Icon="PeopleCommunity16"
                     PageTag="tm_details"
                     />
-                <ui:NavigationItem
-                    Content="Services"
-                    Icon="PuzzlePiece24"
-                    IconFilled="True"
-                    PageTag="tm_services"
-                    >
-                    <ui:NavigationItem.IconForeground>
-                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.InactiveCaptionColorKey}}" />
-                    </ui:NavigationItem.IconForeground>
-                </ui:NavigationItem>
             </ui:NavigationCompact.Items>
             <ui:NavigationCompact.Footer>
                 <ui:NavigationItem
