@@ -37,6 +37,7 @@
 
   <ItemGroup>
     <Folder Include="Resources\App\Start\" />
+    <Folder Include="Services\Steam\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
 

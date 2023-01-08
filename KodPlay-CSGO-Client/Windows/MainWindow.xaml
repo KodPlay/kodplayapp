@@ -52,6 +52,7 @@
                     Content="用户数据"
                     Icon="Person12"
                     PageTag="tm_app_history"
+                    PageType="{x:Type local:UserLRdata}"
                      />
                 <ui:NavigationItem
                     Content="社区"
