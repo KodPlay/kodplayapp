@@ -117,8 +117,8 @@
             </ui:CardAction>
         </Grid>
 
-        <TextBlock Margin="0,24,0,0" FontSize="16" FontFamily="Microsoft YaHei" Text="游戏" Foreground="#FFFBFBFB"/>
-        <TextBlock Margin="0,8,0,0" Foreground="Gray" FontFamily="Microsoft YaHei" Text="选择服务器玩法"/>
+        <TextBlock Margin="0,24,0,0" FontSize="16" FontFamily="Microsoft YaHei" Text="游戏模式" Foreground="#FFFBFBFB"/>
+        <TextBlock Margin="0,8,0,0" Foreground="Gray" FontFamily="Microsoft YaHei" Text="选择服务器玩法[暂未开放]"/>
         <Grid Margin="0,8,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -209,11 +209,11 @@
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" Text="ID" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center"/>
             <TextBlock Grid.Column="1" Text="服务器名称" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="2" Text="社区" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="3" Text="类型" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="4" Text="人数" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="5" Text="地图" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="6" Text="热度" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="2" Text="地图" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="3" Text="人数" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="4" Text="快速启动" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="5" Text="进服指令" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" Margin="0,0,30,0"/>
+            <TextBlock Grid.Column="6" Text="在线玩家" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" Margin="0,0,50,0"/>
         </Grid>
         <ScrollViewer x:Name="ServerListScr" Height="300">
             <ListBox x:Name="CommunityServerList"  SelectionChanged="CommunityServerList_SelectionChanged" d:ItemsSource="{d:SampleData ItemCount=5}">
@@ -236,11 +236,11 @@
 
                                 <!--<TextBlock Grid.Column="1" Text="{Binding ServerTag}" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" Margin="0,0,20,0" />-->
                                 <hc:RunningBlock Grid.Column="1" AutoRun="True" IsRunning="True"  Content="{Binding ServerTag}" FontFamily="Microsoft YaHei" Foreground="White" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,20,0"/>
-                                <TextBlock Grid.Column="2" Text="{Binding CommunityName}" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" Margin="0,0,20,0"/>
+                                <TextBlock Grid.Column="2" Text="{Binding Map}" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" Margin="0,0,20,0"/>
                                 <TextBlock Grid.Column="3" Text="{Binding Player}" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" Margin="0,0,20,0"/>
-                                <TextBlock Grid.Column="4" Text="{Binding PersonOfNumber}" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" Margin="0,0,20,0"/>
-                                <TextBlock Grid.Column="5" Text="{Binding Map}" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" Margin="0,0,20,0"/>
-                                <TextBlock Grid.Column="6" Text="{Binding Hot}" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" Margin="0,0,20,0"/>
+                                <ui:Button Grid.Column="4" Icon="Airplane20" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" Margin="0,0,20,0"/>
+                                <ui:Button Grid.Column="5" Icon="Copy16" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" Margin="0,0,20,0"/>
+                                <ui:Button Grid.Column="6" Icon="List16" FontFamily="Microsoft YaHei" Foreground="White" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" Margin="0,0,20,0"/>
                             </Grid>
                         </StackPanel>
 

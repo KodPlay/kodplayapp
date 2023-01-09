@@ -38,24 +38,18 @@ namespace KodPlay_CSGO_Client.Services.Analysis_Userdata
         {
             KodPlay_CSGO_Client.Services.Control.Control_HTMLUser_Data control_HTMLUser_Data = new Control.Control_HTMLUser_Data();
 
-            HtmlWeb Web = new HtmlWeb();
-            HtmlDocument DOC = Web.Load(PageUrl);
-            HtmlNode CradInfo = DOC.DocumentNode.SelectSingleNode("//div[@class='mdui-row']//div[@id='mdui-card-content']"); //server_count
-            HtmlNodeCollection aCollection = CradInfo.ChildNodes;
-            foreach(var item in aCollection)
-            {
-                string aInterText = item.InnerText;
-                Console.WriteLine("标签内容:" + aInterText);
-            }
+         
 
         }
 
         public static void Analysis_Userdata_ServerInfo()
         {
-            HtmlWeb Web = new HtmlWeb();
-            HtmlDocument DOC = Web.Load(PageUrl);
-            HtmlNode Table = DOC.DocumentNode.SelectSingleNode("//div[@class='layui-form layui-border-box layui-table-view']"); //server_count
+            HtmlWeb Webs = new HtmlWeb();
+            HtmlDocument DOCc = Webs.Load(PageUrl);
+            HtmlNode Table = DOCc.DocumentNode.SelectSingleNode("//table[@lay-filter='demo']//tbody"); //server_count
             HtmlNodeCollection aCollection = Table.ChildNodes;
+            HtmlNode node = DOCc.CreateElement("//tr//td");
+            aCollection = Table.ChildNodes;
             foreach (var item in aCollection)
             {
                 string aInterText = item.InnerText;

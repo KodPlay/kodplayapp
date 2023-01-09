@@ -28,7 +28,7 @@ namespace KodPlay_CSGO_Client
 
         private void Server_Loaded(object sender, RoutedEventArgs e)
         {
-            KodPlay_CSGO_Client.Services.Analysis_Userdata.Analysis_Userdata.Analysis_Userdata_ServerInfo();
+            KodPlay_CSGO_Client.Services.Analysis_Userdata.Analysis_Userdata.Analysis_Userdata_handinfoAsync();
         }
 
         private void Server_Model_Set(object sender, RoutedEventArgs e)
