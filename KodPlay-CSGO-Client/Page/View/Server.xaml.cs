@@ -23,6 +23,12 @@ namespace KodPlay_CSGO_Client
         public Server()
         {
             InitializeComponent();
+            Loaded += Server_Loaded;
+        }
+
+        private void Server_Loaded(object sender, RoutedEventArgs e)
+        {
+            KodPlay_CSGO_Client.Services.Analysis_Userdata.Analysis_Userdata.Analysis_Userdata_ServerInfo();
         }
 
         private void Server_Model_Set(object sender, RoutedEventArgs e)

@@ -47,6 +47,7 @@
                     Icon="ShoppingBagArrowLeft20"
                     IconFilled="True"
                     PageTag="tm_services"
+                    PageType="{x:Type local:Store}" Cursor="Hand"
                     />
                 <ui:NavigationItem
                     Content="用户数据"

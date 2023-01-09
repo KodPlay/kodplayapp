@@ -16,5 +16,12 @@ namespace KodPlay_CSGO_Client.Services.Control
        public static ulong SteamID;
     }
 
+    public struct Control_HTMLUser_Data
+    {
+        public string server_count;
+        public string online_count;
+        public string ban_count;
+
+    }
 
 }
