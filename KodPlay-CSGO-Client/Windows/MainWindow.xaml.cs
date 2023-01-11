@@ -1,4 +1,5 @@
-﻿using KodPlay_CSGO_Client.Services.ProcessStartRun;
+﻿using KodPlay_CSGO_Client.Services.AutoUpdata;
+using KodPlay_CSGO_Client.Services.ProcessStartRun;
 using KodPlay_CSGO_Client.Services.steaminfo;
 using System;
 using System.Collections.Generic;
@@ -42,6 +43,11 @@ namespace KodPlay_CSGO_Client
                 MessageBox.Show("请打开Steam,并重启软件");
                 Process.GetCurrentProcess().Kill();
             }
+
+            //注册服务
+            AutoUpdata.Client_Update(); //自动更新服务
+            
+
         }
     }
 }

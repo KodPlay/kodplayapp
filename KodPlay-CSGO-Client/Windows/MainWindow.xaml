@@ -40,7 +40,7 @@
                     Content="玩"
                     Icon="Games16"
                     Tag="tm_performance"
-                    PageType="{x:Type local:Server}" Cursor="Hand"
+                    PageType="{x:Type local:TemporaryServer}" Cursor="Hand"
                     />
                 <ui:NavigationItem
                     Content="商城"

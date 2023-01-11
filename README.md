@@ -1,1 +1,6 @@
-# KodPlay-CSGO-Client
+# Welcome KodPlay Community Client Project
+
+
+
+
+
