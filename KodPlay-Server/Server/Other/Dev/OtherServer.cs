@@ -7,7 +7,7 @@ namespace KodPlay_Server.Server.Other.Dev
     [Route("api/[controller]")]
     [ApiController]
     public class OtherServer : ControllerBase
-    {javascript:void(0);
+    {
         [HttpGet("ServerInfo/DevInfo")]
         public string Get()
         {
