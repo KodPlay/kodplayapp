@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <Folder Include="Control\Data\" />
-    <Folder Include="Database\Read\Server\" />
   </ItemGroup>
 
 </Project>

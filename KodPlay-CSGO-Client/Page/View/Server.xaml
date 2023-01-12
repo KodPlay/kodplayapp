@@ -52,7 +52,7 @@
         Margin="18,0,18,18"
         IsVirtualizing="True" 
         VirtualizationMode="Recycling">
-        <TextBlock Foreground="Gray" FontFamily="Microsoft YaHei" Text="联合社区-游戏服务页    在这里你能设置定制化游戏解决方案以帮助您获得最佳游戏体验" TextWrapping="WrapWithOverflow"/>
+        
 
         <Grid Grid.Row="1" Margin="0,24,0,0">
             <Grid.ColumnDefinitions>
