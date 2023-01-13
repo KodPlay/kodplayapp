@@ -6,9 +6,15 @@
     <RootNamespace>KodPlay_CSGO_Client</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <Company>版权所有© KodPlay</Company>
+    <Product>KodPlay Client</Product>
+    <Authors>0X7E9FB Dev</Authors>
+    <ApplicationIcon>Resources\App\Icon\Logo.ico</ApplicationIcon>
+    <AssemblyName>KodPlay启动器</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\App\Icon\Logo.ico" />
     <None Remove="Resources\App\Icon\wpfui.png" />
     <None Remove="Resources\App\Index\bg1.png" />
     <None Remove="Resources\App\Index\ezgif.com-gif-maker.gif" />
@@ -26,6 +32,10 @@
     <None Remove="Resources\App\Option\MainMenu\microsoft-shell-gallery.ico" />
     <None Remove="Resources\App\Option\MainMenu\microsoft-shell-monitor.ico" />
     <None Remove="Resources\App\Option\MainMenu\microsoft-shell-settings.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\App\Icon\Logo.ico" />
   </ItemGroup>
 
   <ItemGroup>

@@ -20,7 +20,7 @@ namespace KodPlay_CSGO_Client.Services.AutoUpdata
             Thread.CurrentThread.CurrentCulture =
             Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("zh");
             AutoUpdater.ReportErrors = true;
-            AutoUpdater.Start("http://47.109.60.217:81/AutoUpdata/autoupdata.xml");//
+            AutoUpdater.Start("https://kodplay.com/App/AutoUpdata/Config/AutoupdataConfig.xml");//
             AutoUpdater.RunUpdateAsAdmin = false;
             AutoUpdater.CheckForUpdateEvent += AutoUpdaterOnCheckForUpdateEvent;
         }

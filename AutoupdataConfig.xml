@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+  <version>1.0.0.0</version>
+  <url>https://kodplay.com/App/AutoUpdata/Download/KodPlayClient1000.zip</url>
+  <changelog>https://kodplay.com/App/AutoUpdata/VersionNote/VersionNote.txt</changelog>
+  <mandatory>false</mandatory>
+</item>
