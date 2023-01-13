@@ -7,6 +7,7 @@ builder.Services.AddControllers().AddInject();
 builder.Services.AddRemoteRequest();
 builder.Services.AddDatabaseAccessor(options =>
 {
+    //options.AddDbPool<DefaultDbContext>(connectionMetadata: "Data Source=103.219.30.184;Database=sb;User ID=sb;Password=Mie123...;pooling=true;port=3306;sslmode=none;CharSet=utf8;");
     options.AddDbPool<DefaultDbContext>(DbProvider.MySqlOfficial);
 });
 

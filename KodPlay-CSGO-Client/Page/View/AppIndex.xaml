@@ -11,6 +11,6 @@
       Title="AppIndex">
 
     <Grid>
-        <webview2:WebView2 Source="https://kodplay.com/app.html"/>
+        <webview2:WebView2 x:Name="AppIndexWeb" Source="https://kodplay.com/app.html" CoreWebView2InitializationCompleted="AppIndexWeb_CoreWebView2InitializationCompleted"/>
     </Grid>
 </Page>

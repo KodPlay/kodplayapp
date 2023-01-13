@@ -1,6 +1,9 @@
-﻿using Furion.DynamicApiController;
+﻿using Furion.DatabaseAccessor.Extensions;
+using Furion.DynamicApiController;
+using KodPlay_Server.Database;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace KodPlay_Server.Server.ViewModels
 {
@@ -8,9 +11,16 @@ namespace KodPlay_Server.Server.ViewModels
     [ApiController]
     public class ServerPageAPI : IDynamicApiController
     {
-        public string GetOnlionServerCount()
+        /// <summary>
+        /// 查询在线服务器数量
+        /// </summary>
+        /// <returns>返回在线服务器数量(int)</returns>
+        public string ServerCount()
         {
-            return $"v1.0.0";
+
+            var dataTable = "select * from sb_servers".SqlQuery();
+            string data = dataTable.ToString(); 
+            return data;
         }
 
         public string GetOnlionPersonCount()

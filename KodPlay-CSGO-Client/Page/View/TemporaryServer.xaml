@@ -11,6 +11,6 @@
       Title="TemporaryServer">
 
     <Grid>
-        <webview2:WebView2 Source="https://shequfu.kodplay.com"/>
+        <webview2:WebView2 x:Name="TemporaryServerWeb" CoreWebView2InitializationCompleted="TemporaryServer_CoreWebView2InitializationCompleted" Source="https://shequfu.kodplay.com"/>
     </Grid>
 </ui:UiPage>

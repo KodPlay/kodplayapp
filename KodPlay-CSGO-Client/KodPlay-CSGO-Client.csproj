@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\App\Icon\Logo.jpg" />
     <None Remove="Resources\App\Icon\wpfui.png" />
     <None Remove="Resources\App\Index\bg1.png" />
     <None Remove="Resources\App\Index\ezgif.com-gif-maker.gif" />
@@ -45,6 +46,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\App\Icon\Logo.jpg" />
     <Resource Include="Resources\App\Icon\wpfui.png" />
     <Resource Include="Resources\App\Index\bg1.png" />
     <Resource Include="Resources\App\Index\ezgif.com-gif-maker.gif" />

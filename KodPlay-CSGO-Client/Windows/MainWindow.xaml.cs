@@ -29,10 +29,20 @@ namespace KodPlay_CSGO_Client
         {
             InitializeComponent();
             Loaded += MainWindow_Loaded;
+            
         }
+
+
+
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            if (WindowState != WindowState.Normal)
+            {
+                WindowState = WindowState.Normal;
+            }
+
+
             if (ProcessStartRun.Cheak_Process_In_Run()) //先检测Steam是否在线
             {
                 using (var steam = new SteamBridge())
@@ -48,6 +58,25 @@ namespace KodPlay_CSGO_Client
             AutoUpdata.Client_Update(); //自动更新服务
             
 
+        }
+
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+        {
+            this.Hide();
+            e.Cancel = true;
+        }
+
+        private void TrayMenuItem_OnClick(object sender, RoutedEventArgs e)
+        {
+            string tag = (sender as MenuItem).Tag.ToString();
+            if(tag == "open")
+            {           
+                this.Show();             
+            }
+            else
+            {
+                Process.GetCurrentProcess().Kill();
+            }
         }
     }
 }
