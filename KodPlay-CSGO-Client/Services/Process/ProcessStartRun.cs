@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 
@@ -26,5 +28,14 @@ namespace KodPlay_CSGO_Client.Services.ProcessStartRun
             return false;
 
         }
+
+        //运行第三方APP
+        public void RunOtherAccessApp()
+        {
+            
+        }
+
+
+
     }
 }

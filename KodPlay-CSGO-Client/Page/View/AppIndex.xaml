@@ -7,7 +7,7 @@
       xmlns:webview2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
       xmlns:local="clr-namespace:KodPlay_CSGO_Client"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="1350"
       Title="AppIndex">
 
     <Grid>

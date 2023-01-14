@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -37,11 +38,6 @@ namespace KodPlay_CSGO_Client
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            if (WindowState != WindowState.Normal)
-            {
-                WindowState = WindowState.Normal;
-            }
-
 
             if (ProcessStartRun.Cheak_Process_In_Run()) //先检测Steam是否在线
             {

@@ -27,6 +27,8 @@
     <None Remove="Resources\App\Option\MainMenu\microsoft-shell-gallery.ico" />
     <None Remove="Resources\App\Option\MainMenu\microsoft-shell-monitor.ico" />
     <None Remove="Resources\App\Option\MainMenu\microsoft-shell-settings.ico" />
+    <None Remove="Resources\App\Proccess\kac.exe" />
+    <None Remove="Resources\App\Proccess\updater.exe" />
   </ItemGroup>
 
   <ItemGroup>
@@ -64,6 +66,8 @@
     <Resource Include="Resources\App\Option\MainMenu\microsoft-shell-gallery.ico" />
     <Resource Include="Resources\App\Option\MainMenu\microsoft-shell-monitor.ico" />
     <Resource Include="Resources\App\Option\MainMenu\microsoft-shell-settings.ico" />
+    <Resource Include="Resources\App\Proccess\kac.exe" />
+    <Resource Include="Resources\App\Proccess\updater.exe" />
   </ItemGroup>
 
 </Project>

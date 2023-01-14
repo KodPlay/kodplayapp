@@ -14,7 +14,6 @@ namespace KodPlay_Server.Database.Read.Server
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) //配置连接字符串
         {
-            optionsBuilder.UseL();
             optionsBuilder.UseMySQL("Data Source=103.219.30.184;Database=sb;User ID=sb;Password=Mie123...;pooling=true;port=3306;sslmode=none;CharSet=utf8;");
             base.OnConfiguring(optionsBuilder);
         }

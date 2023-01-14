@@ -38,8 +38,11 @@ namespace KodPlay_CSGO_Client
             {
                 AppIndexWeb.CoreWebView2.Navigate("https://kodplay.com/app.html");
 
-                var path = AppDomain.CurrentDomain.BaseDirectory + "WebViewCache";
+                //设置请求UA
+                //AppIndexWeb.CoreWebView2.Settings.UserAgent = "kod";
+               
 
+                var path = AppDomain.CurrentDomain.BaseDirectory + "WebViewCache";
                 AppIndexWeb.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;//禁用右键菜单
                 AppIndexWeb.CoreWebView2.Settings.AreDevToolsEnabled = false;//禁用DevTools 窗口
                 AppIndexWeb.CoreWebView2.Settings.IsZoomControlEnabled = false;//禁用缩放
