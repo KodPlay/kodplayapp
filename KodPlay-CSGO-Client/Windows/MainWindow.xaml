@@ -6,10 +6,16 @@
         xmlns:local="clr-namespace:KodPlay_CSGO_Client"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
         mc:Ignorable="d"
-        Title="KodPlay社区客户端 - PROJECT 1.0.0.0 Version" Height="650" Width="1200"
-        d:DesignHeight="650"
-        d:DesignWidth="1200"
-        Background="#FF282F61"
+        Title="KodPlay CSGO Community Clinet - PROJECT ES Version" 
+        Height="900"  Width="1400"
+        MaxHeight="900" MinHeight="900"
+        MaxWidth="1400" MinWidth="1400"
+        d:DesignHeight="900"
+        d:DesignWidth="1400"
+        Background="White"
+        Style="{DynamicResource UiWindow}"
+        ResizeMode="NoResize"        
+        WindowStyle="None"
         ExtendsContentIntoTitleBar="True"
         WindowBackdropType="Mica"
         WindowCornerPreference="Round"
@@ -20,56 +26,59 @@
             <ColumnDefinition Width="21*" />
             <ColumnDefinition Width="107*"/>
         </Grid.ColumnDefinitions>
-
-        <ui:NavigationCompact
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--FF282F61-->
+        <ui:NavigationStore
             x:Name="RootNavigation"
             Grid.Column="0"
             Frame="{Binding ElementName=RootFrame}"
             SelectedPageIndex="0"
             TransitionDuration="200"
-            TransitionType="FadeInWithSlide" Background="#FF0A24DE" Margin="4,4,4,4" 
+            TransitionType="FadeIn" Grid.Row="1" Background="White"  
             >
-            <ui:NavigationCompact.Items>
+            <ui:NavigationStore.Items>
                 <ui:NavigationItem
                    Content="总览"
-                    Icon="Home24"
+                    Icon="Home12"
                     PageTag="tm_startup" Cursor="Hand"
-                   PageType="{x:Type local:AppIndex}" FontFamily="HarmonyOS Sans Condensed Thin"
+                   PageType="{x:Type local:AppIndex}" FontFamily="HarmonyOS Sans Condensed Thin" Foreground="#FF0E0E0E" IconForeground="Black"
                     />
-
                 <ui:NavigationItem
                     Content="玩"
                     Icon="Games16"
                     Tag="tm_performance"
-                    PageType="{x:Type local:TemporaryServer}" Cursor="Hand"
+                    PageType="{x:Type local:TemporaryServer}" Cursor="Hand" Foreground="#FF060606" IconForeground="Black"
                     />
                 <ui:NavigationItem
                     Content="商城"
                     Icon="ShoppingBagArrowLeft20"
                     IconFilled="True"
                     PageTag="tm_services"
-                    PageType="{x:Type local:Store}" Cursor="Hand"
+                    PageType="{x:Type local:Store}" Cursor="Hand" Foreground="#FF060606" IconForeground="Black"
                     />
                 <ui:NavigationItem
                     Content="用户数据"
                     Icon="Person12"
                     PageTag="tm_app_history"
-                    PageType="{x:Type local:UserLRdata}"
+                    PageType="{x:Type local:UserLRdata}" Foreground="#FF060606" IconForeground="Black"
                      />
                 <ui:NavigationItem
                     Content="社区"
                     Icon="PeopleCommunity16"
-                    PageTag="tm_details"
+                    PageType="{x:Type local:Community}" Foreground="#FF060606" IconForeground="Black"
                     />
-            </ui:NavigationCompact.Items>
-            <ui:NavigationCompact.Footer>
+            </ui:NavigationStore.Items>
+            <!--<ui:NavigationCompact.Footer>
                 <ui:NavigationItem
                     Content="Settings"
                     Icon="Settings24"
                     PageTag="tm_settings"
                     />
-            </ui:NavigationCompact.Footer>
-        </ui:NavigationCompact>
+            </ui:NavigationCompact.Footer>-->
+        </ui:NavigationStore>
 
         <ui:TitleBar
             x:Name="RootTitleBar"
@@ -78,17 +87,14 @@
             MinimizeToTray="False"
             ShowHelp="False"
             Icon="https://game.kodplay.com/wp-content/uploads/2022/02/icon.ico"
-            UseSnapLayout="True" Grid.ColumnSpan="2" Width="1150" Margin="1,0,1,0" FontFamily="HarmonyOS Sans Medium" Height="50" Grid.Column="1">
-            <ui:TitleBar.Background>
-                <ImageBrush/>
-            </ui:TitleBar.Background>
+            Grid.ColumnSpan="2" FontFamily="HarmonyOS Sans Medium" Height="47" Background="White" CanMaximize="False" ShowMaximize="False" Foreground="Black" >
             <ui:TitleBar.Header>
                 <StackPanel
                     Margin="0,0,12,15"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
                     Orientation="Horizontal">
-                    <ui:Button
+                    <!--<ui:Button
                         Margin="0,0,4,0"
                         Padding="4,4"
                         Appearance="Secondary"
@@ -97,16 +103,54 @@
                         Margin="0"
                         Padding="4,4"
                         Appearance="Secondary"
-                        Icon="CheckmarkCircle12" BorderBrush="#FF65FF12"/>
+                        
+                        Icon="CheckmarkCircle12" BorderBrush="#FF65FF12" />-->
                 </StackPanel>
             </ui:TitleBar.Header>
+            <ui:TitleBar.Tray>
+                <ui:NotifyIcon
+                    FocusOnLeftClick="True"
+                    Icon="/Resources/App/Icon/icon.png"
+                    MenuOnRightClick="True"
+                    TooltipText="WPF UI">
+                    <ui:NotifyIcon.Menu>
+                        <ContextMenu>
+                            <ui:MenuItem
+                                Click="TrayMenuItem_OnClick"
+                                Header="打开面板"
+                                SymbolIcon="PanelBottomExpand20"
+                                Tag="open" />
+                            <Separator />
+                            <ui:MenuItem
+                                Click="TrayMenuItem_OnClick"
+                                Header="打开KAC"
+                                SymbolIcon="Open16"
+                                Tag="openKac" />
+                            <Separator />
+                            <ui:MenuItem
+                                Click="TrayMenuItem_OnClick"
+                                Header="关闭KAC"
+                                SymbolIcon="LockOpen28"
+                                Tag="closeKac" />
+                            <Separator />
+                            <ui:MenuItem
+                                Click="TrayMenuItem_OnClick"
+                                Header="重启应用"
+                                SymbolIcon="ArrowClockwise24"
+                                Tag="reload" />
+                            <ui:MenuItem
+                                Click="TrayMenuItem_OnClick"
+                                Header="退出应用"
+                                SymbolIcon="ArrowExit20"
+                                Tag="close" />
+                        </ContextMenu>
+                    </ui:NotifyIcon.Menu>
+                </ui:NotifyIcon>
+            </ui:TitleBar.Tray>
         </ui:TitleBar>
 
-        <Grid Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,-1,0,0" Grid.ColumnSpan="2">
-            <Border
-                Margin="0,46,0,0"
-                Background="#FF10123D"
-                CornerRadius="8,0,0,0">
+        <Grid Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="890" Margin="0,3,0,0">
+
                 <Grid HorizontalAlignment="Center">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -126,7 +170,7 @@
                         Grid.Row="1" Width="1060" HorizontalAlignment="Left" Height="550" Margin="40,0,40,0" VerticalAlignment="Top" />-->
                     <Frame
                         x:Name="RootFrame"
-                        Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1150" Height="588" />
+                        Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1350" Height="890" Margin="0,50,0,0" />
                 </Grid>
             </Border>
         </Grid>

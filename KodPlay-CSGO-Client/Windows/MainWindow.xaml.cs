@@ -3,6 +3,7 @@ using KodPlay_CSGO_Client.Services.ProcessStartRun;
 using KodPlay_CSGO_Client.Services.steaminfo;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Linq;
@@ -48,6 +49,37 @@ namespace KodPlay_CSGO_Client
             AutoUpdata.Client_Update(); //自动更新服务
             
 
+        private void TrayMenuItem_OnClick(object sender, RoutedEventArgs e)
+        {
+            string tag = (sender as MenuItem).Tag.ToString();
+            if(tag == "open")
+            {           
+                this.Show();             
+            }
+            else if (tag == "openKac")
+            {
+                string kacpath = System.AppDomain.CurrentDomain.BaseDirectory + "kac.exe";
+                System.Diagnostics.Process.Start(kacpath);
+                MessageBox.Show("成功打开KAC");
+            }
+            else if (tag == "closeKac")
+            {
+                Process[] myproc = Process.GetProcesses();
+                foreach (Process item in myproc)
+                {
+                    if (item.ProcessName == "kac")
+                    {
+                        item.Kill();
+                    }
+                }
+
+                MessageBox.Show("成功关闭KAC");
+                
+            }
+            else
+            {
+                Process.GetCurrentProcess().Kill();
+            }
         }
     }
 }

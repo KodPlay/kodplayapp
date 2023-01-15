@@ -6,15 +6,18 @@
     <RootNamespace>KodPlay_CSGO_Client</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <Company>版权所有© KodPlay</Company>
-    <Product>KodPlay Client</Product>
-    <Authors>0X7E9FB Dev</Authors>
-    <ApplicationIcon>Resources\App\Icon\Logo.ico</ApplicationIcon>
-    <AssemblyName>KodPlay启动器</AssemblyName>
+    <AssemblyName>KodPlay</AssemblyName>
+    <ApplicationIcon>Resources\App\Icon\icon.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Authors>0X7E9FB Dev - Desk Stand</Authors>
+    <Company>Copyright KodPlay</Company>
+    <Product>KodPlay Game Client</Product>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\App\Icon\Logo.ico" />
+    <None Remove="Resources\App\Icon\icon.ico" />
+    <None Remove="Resources\App\Icon\icon.png" />
+    <None Remove="Resources\App\Icon\Logo.jpg" />
     <None Remove="Resources\App\Icon\wpfui.png" />
     <None Remove="Resources\App\Index\bg1.png" />
     <None Remove="Resources\App\Index\ezgif.com-gif-maker.gif" />
@@ -55,6 +58,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\App\Icon\icon.ico" />
+    <Resource Include="Resources\App\Icon\icon.png" />
+    <Resource Include="Resources\App\Icon\Logo.jpg" />
     <Resource Include="Resources\App\Icon\wpfui.png" />
     <Resource Include="Resources\App\Index\bg1.png" />
     <Resource Include="Resources\App\Index\ezgif.com-gif-maker.gif" />
