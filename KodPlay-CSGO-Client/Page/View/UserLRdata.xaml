@@ -11,6 +11,6 @@
       Title="UserLRdata">
 
     <Grid>
-        <webview2:WebView2 x:Name="LR"/>
+        <webview2:WebView2 x:Name="LRWeb" CoreWebView2InitializationCompleted="LRWeb_CoreWebView2InitializationCompleted"/>
     </Grid>
 </ui:UiPage>

@@ -1,4 +1,5 @@
-﻿using KodPlay_CSGO_Client.Services.AutoUpdata;
+﻿using KodPlay_CSGO_Client.Services;
+using KodPlay_CSGO_Client.Services.AutoUpdata;
 using KodPlay_CSGO_Client.Services.ProcessStartRun;
 using KodPlay_CSGO_Client.Services.steaminfo;
 using System;
@@ -38,11 +39,13 @@ namespace KodPlay_CSGO_Client
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            ServerSignalR serverSignalR = new ServerSignalR();
 
             if (ProcessStartRun.Cheak_Process_In_Run()) //先检测Steam是否在线
             {
                 using (var steam = new SteamBridge())
                     KodPlay_CSGO_Client.Services.Control.Control_Steam_Login_Data.SteamID = steam.GetSteamId();//获取SteamID
+                ProcessStartRun.CheakOtherAccessApp();
             }
             else
             {
@@ -52,8 +55,7 @@ namespace KodPlay_CSGO_Client
 
             //注册服务
             AutoUpdata.Client_Update(); //自动更新服务
-            
-
+            //serverSignalR.ConnectServer(); //SignalR服务
         }
 
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)

@@ -9,6 +9,6 @@
       Title="Community">
 
     <Grid>
-        <webview2:WebView2 Source="https://game.kodplay.com/"/>
+        <webview2:WebView2 x:Name="CommunityWeb" CoreWebView2InitializationCompleted="CommunityWeb_CoreWebView2InitializationCompleted" Source="https://game.kodplay.com/"/>
     </Grid>
 </Page>

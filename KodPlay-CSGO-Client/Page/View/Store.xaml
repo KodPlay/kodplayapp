@@ -11,6 +11,6 @@
       Title="store">
 
     <Grid>
-        <webview2:WebView2 Source="https://game.kodplay.com/store"/>
+        <webview2:WebView2 x:Name="StoreWeb" CoreWebView2InitializationCompleted="StoreWeb_CoreWebView2InitializationCompleted" Source="https://game.kodplay.com/store"/>
     </Grid>
 </ui:UiPage>

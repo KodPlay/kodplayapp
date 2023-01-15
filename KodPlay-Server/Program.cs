@@ -16,18 +16,7 @@ builder.Services.AddDatabaseAccessor(options =>
 });//注册数据库EFCORE
 
 
-
-
 var app = builder.Build();
-
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapHubs();
-    //endpoints.MapControllerRoute(
-    //    name: "default",
-    //    pattern: "{controller=Home}/{action=Index}/{id?}");
-    endpoints.MapHub<OnlionHub>("/hubs/onlionhub");
-});// 注册集线器
 
 app.UseHttpsRedirection();
 
@@ -37,4 +26,6 @@ app.UseInject();
 
 app.MapControllers();
 
+app.UseCors();
+app.MapHub<OnlionHub>("/hubs/onlionhub");
 app.Run();
