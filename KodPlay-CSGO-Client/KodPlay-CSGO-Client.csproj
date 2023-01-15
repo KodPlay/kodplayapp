@@ -9,12 +9,24 @@
     <AssemblyName>KodPlay</AssemblyName>
     <ApplicationIcon>Resources\App\Icon\icon.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>1.0.0.0</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resources\App\Start\**" />
+    <EmbeddedResource Remove="Resources\App\Start\**" />
+    <None Remove="Resources\App\Start\**" />
+    <Page Remove="Resources\App\Start\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="Resources\App\Icon\icon.ico" />
     <None Remove="Resources\App\Icon\Icon.png" />
+    <None Remove="Resources\App\Icon\Iconfb.png" />
+    <None Remove="Resources\App\Icon\KodPlayLogo.png" />
     <None Remove="Resources\App\Icon\Logo.jpg" />
+    <None Remove="Resources\App\Icon\Logo.png" />
+    <None Remove="Resources\App\Icon\PlayLogoKouDi.jpg" />
     <None Remove="Resources\App\Icon\wpfui.png" />
     <None Remove="Resources\App\Index\bg1.png" />
     <None Remove="Resources\App\Index\ezgif.com-gif-maker.gif" />
@@ -52,7 +64,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\App\Start\" />
     <Folder Include="Services\Steam\" />
     <Folder Include="Services\AutoUpdata\" />
     <Folder Include="ViewModels\" />
@@ -60,8 +71,9 @@
 
   <ItemGroup>
     <Resource Include="Resources\App\Icon\icon.ico" />
-    <Resource Include="Resources\App\Icon\Icon.png" />
+    <Resource Include="Resources\App\Icon\KodPlayLogo.png" />
     <Resource Include="Resources\App\Icon\Logo.jpg" />
+    <Resource Include="Resources\App\Icon\PlayLogoKouDi.jpg" />
     <Resource Include="Resources\App\Icon\wpfui.png" />
     <Resource Include="Resources\App\Index\bg1.png" />
     <Resource Include="Resources\App\Index\ezgif.com-gif-maker.gif" />
@@ -81,6 +93,33 @@
     <Resource Include="Resources\App\Option\MainMenu\microsoft-shell-settings.ico" />
     <Resource Include="Resources\App\Proccess\kac.exe" />
     <Resource Include="Resources\App\Proccess\updater.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Page\View\PlayList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\View\Top.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\View\Ban.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Page\View\PlayList.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\View\Top.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\View\Ban.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 
 </Project>

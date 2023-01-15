@@ -30,7 +30,7 @@ namespace KodPlay_CSGO_Client
         {
             if (TemporaryServerWeb.CoreWebView2 != null)
             {
-                TemporaryServerWeb.CoreWebView2.Navigate("https://shequfu.kodplay.com");
+                TemporaryServerWeb.CoreWebView2.Navigate("https://game.kodplay.com/stats");
 
                 var path = AppDomain.CurrentDomain.BaseDirectory + "WebViewCache";
 

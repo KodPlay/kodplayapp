@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:KodPlay_CSGO_Client"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
         mc:Ignorable="d"
-        Title="KodPlay CSGO Community Clinet - PROJECT ES Version" 
+        Title="KodPlay" 
         Height="900"  Width="1400"
         MaxHeight="900" MinHeight="900"
         MaxWidth="1400" MinWidth="1400"
@@ -48,27 +48,46 @@
                 <ui:NavigationItem
                     Content="玩"
                     Icon="Games16"
-                    Tag="tm_performance"
+                    Tag="tm_play"
                     PageType="{x:Type local:TemporaryServer}" Cursor="Hand" Foreground="#FF060606" IconForeground="Black"
+                    />
+                <ui:NavigationItem
+                    Content="榜单"
+                    Icon="List16"
+                    Tag="tm_performance"
+                    PageType="{x:Type local:PlayList}" Cursor="Hand" Foreground="#FF060606" IconForeground="Black"
                     />
                 <ui:NavigationItem
                     Content="商城"
                     Icon="ShoppingBagArrowLeft20"
                     IconFilled="True"
-                    PageTag="tm_services"
+                    PageTag="tm_store"
                     PageType="{x:Type local:Store}" Cursor="Hand" Foreground="#FF060606" IconForeground="Black"
                     />
                 <ui:NavigationItem
-                    Content="用户数据"
-                    Icon="Person12"
-                    PageTag="tm_app_history"
-                    PageType="{x:Type local:UserLRdata}" Foreground="#FF060606" IconForeground="Black"
+                    Content="封禁"
+                    Icon="GridKanban20"
+                    IconFilled="True"
+                    PageTag="tm_ban"
+                    PageType="{x:Type local:Ban}" Cursor="Hand" Foreground="#FF060606" IconForeground="Black"
+                    />
+                <ui:NavigationItem
+                    Content="天梯"
+                    Icon="RatingMature16"
+                    PageTag="tm_top"
+                    PageType="{x:Type local:Top}" Foreground="#FF060606" IconForeground="Black"
                      />
                 <ui:NavigationItem
+                    Content="数据"
+                    Icon="Person12"
+                    PageTag="tm_data"
+                    PageType="{x:Type local:UserLRdata}" Foreground="#FF060606" IconForeground="Black" Cursor="Hand"
+                     />
+                <!--<ui:NavigationItem
                     Content="社区"
                     Icon="PeopleCommunity16"
                     PageType="{x:Type local:Community}" Foreground="#FF060606" IconForeground="Black"
-                    />
+                    />-->
             </ui:NavigationStore.Items>
             <!--<ui:NavigationCompact.Footer>
                 <ui:NavigationItem
@@ -85,7 +104,7 @@
             ForceShutdown="False"
             MinimizeToTray="False"
             ShowHelp="False"
-            Icon="/Resources/App/Icon/icon.png"
+            Icon="/Resources/App/Icon/KodPlayLogo.png"
             Grid.ColumnSpan="2" FontFamily="HarmonyOS Sans Medium" Height="50" Background="White" CanMaximize="False" ShowMaximize="False" Foreground="Black" >
             <ui:TitleBar.Header>
                 <StackPanel
@@ -109,9 +128,9 @@
             <ui:TitleBar.Tray>
                 <ui:NotifyIcon
                     FocusOnLeftClick="True"
-                    Icon="/Resources/App/Icon/icon.png"
+                    Icon="/Resources/App/Icon/PlayLogoKouDi.jpg"
                     MenuOnRightClick="True"
-                    TooltipText="WPF UI">
+                    TooltipText="KodPlay">
                     <ui:NotifyIcon.Menu>
                         <ContextMenu>
                             <ui:MenuItem

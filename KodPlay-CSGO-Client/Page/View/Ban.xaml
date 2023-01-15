@@ -1,4 +1,4 @@
-﻿<ui:UiPage x:Class="KodPlay_CSGO_Client.TemporaryServer"
+﻿<ui:UiPage x:Class="KodPlay_CSGO_Client.Ban"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -11,6 +11,6 @@
       Title="TemporaryServer">
 
     <Grid>
-        <webview2:WebView2 x:Name="TemporaryServerWeb" CoreWebView2InitializationCompleted="TemporaryServer_CoreWebView2InitializationCompleted" Source="https://game.kodplay.com/stats"/>
+        <webview2:WebView2 x:Name="BanWeb" CoreWebView2InitializationCompleted="Ban_CoreWebView2InitializationCompleted" Source="https://game.kodplay.com/ban"/>
     </Grid>
 </ui:UiPage>
