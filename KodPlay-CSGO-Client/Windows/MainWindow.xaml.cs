@@ -67,9 +67,29 @@ namespace KodPlay_CSGO_Client
         private void TrayMenuItem_OnClick(object sender, RoutedEventArgs e)
         {
             string tag = (sender as MenuItem).Tag.ToString();
-            if(tag == "open")
-            {           
-                this.Show();             
+            if (tag == "open")
+            {
+                this.Show();
+            }
+            else if (tag == "openKac")
+            {
+                string kacpath = System.AppDomain.CurrentDomain.BaseDirectory + "kac.exe";
+                System.Diagnostics.Process.Start(kacpath);
+                MessageBox.Show("成功打开KAC");
+            }
+            else if (tag == "closeKac")
+            {
+                Process[] myproc = Process.GetProcesses();
+                foreach (Process item in myproc)
+                {
+                    if (item.ProcessName == "kac")
+                    {
+                        item.Kill();
+                    }
+                }
+
+                MessageBox.Show("成功关闭KAC");
+
             }
             else
             {
