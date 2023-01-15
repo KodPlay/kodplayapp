@@ -12,7 +12,7 @@
         MaxWidth="1400" MinWidth="1400"
         d:DesignHeight="900"
         d:DesignWidth="1400"
-        Background="#0a0a14"
+        Background="White"
         Style="{DynamicResource UiWindow}"
         ResizeMode="NoResize"        
         WindowStyle="None"
@@ -25,6 +25,10 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <!--FF282F61-->
         <ui:NavigationStore
             x:Name="RootNavigation"
@@ -32,7 +36,7 @@
             Frame="{Binding ElementName=RootFrame}"
             SelectedPageIndex="0"
             TransitionDuration="200"
-            TransitionType="FadeIn" Grid.Row="1" Background="White"  
+            TransitionType="FadeIn" Grid.Row="1" Background="White" VerticalAlignment="Top" HorizontalAlignment="Left"  
             >
             <ui:NavigationStore.Items>
                 <ui:NavigationItem
@@ -81,8 +85,8 @@
             ForceShutdown="False"
             MinimizeToTray="False"
             ShowHelp="False"
-            Icon="https://game.kodplay.com/wp-content/uploads/2022/02/icon.ico"
-            Grid.ColumnSpan="2" FontFamily="HarmonyOS Sans Medium" Height="47" Background="White" CanMaximize="False" ShowMaximize="False" Foreground="Black" >
+            Icon="/Resources/App/Icon/icon.png"
+            Grid.ColumnSpan="2" FontFamily="HarmonyOS Sans Medium" Height="50" Background="White" CanMaximize="False" ShowMaximize="False" Foreground="Black" >
             <ui:TitleBar.Header>
                 <StackPanel
                     Margin="0,0,12,15"
@@ -144,7 +148,7 @@
             </ui:TitleBar.Tray>
         </ui:TitleBar>
 
-        <Grid Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="890">
+        <Grid Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="890" Margin="0,5,0,0">
 
                 <Grid HorizontalAlignment="Center">
                     <Grid.RowDefinitions>
