@@ -12,24 +12,19 @@
         MaxWidth="1400" MinWidth="1400"
         d:DesignHeight="900"
         d:DesignWidth="1400"
-        Background="White"
+        Background="#0a0a14"
         Style="{DynamicResource UiWindow}"
         ResizeMode="NoResize"        
         WindowStyle="None"
         ExtendsContentIntoTitleBar="True"
         WindowBackdropType="Mica"
         WindowCornerPreference="Round"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="21*" />
-            <ColumnDefinition Width="107*"/>
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
         <!--FF282F61-->
         <ui:NavigationStore
             x:Name="RootNavigation"
@@ -149,14 +144,14 @@
             </ui:TitleBar.Tray>
         </ui:TitleBar>
 
-        <Grid Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="890" Margin="0,3,0,0">
+        <Grid Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="890">
 
-                <Grid HorizontalAlignment="Center">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <!--<ui:Breadcrumb
+            <Grid HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <!--<ui:Breadcrumb
                         Grid.Row="0"
                         Margin="38"
                         HorizontalAlignment="Left"
@@ -165,14 +160,14 @@
                         FontWeight="Bold"
                         Navigation="{Binding ElementName=RootNavigation}" FontFamily="HarmonyOS Sans Medium" />-->
 
-                    <!--<Frame
+                <!--<Frame
                         x:Name="RootFrame"
                         Grid.Row="1" Width="1060" HorizontalAlignment="Left" Height="550" Margin="40,0,40,0" VerticalAlignment="Top" />-->
-                    <Frame
+                <Frame
                         x:Name="RootFrame"
-                        Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1350" Height="890" Margin="0,50,0,0" />
-                </Grid>
-            </Border>
+                        Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1350" Height="890" Margin="0,45,0,0" />
+            </Grid>
+
         </Grid>
 
     </Grid>
