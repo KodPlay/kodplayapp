@@ -47,14 +47,20 @@ namespace KodPlay_CSGO_Client
 
             //注册服务
             AutoUpdata.Client_Update(); //自动更新服务
-            
+
+
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+        {
+            this.Hide();
+            e.Cancel = true;
+        }
 
         private void TrayMenuItem_OnClick(object sender, RoutedEventArgs e)
         {
             string tag = (sender as MenuItem).Tag.ToString();
-            if(tag == "open")
-            {           
-                this.Show();             
+            if (tag == "open")
+            {
+                this.Show();
             }
             else if (tag == "openKac")
             {
@@ -74,7 +80,7 @@ namespace KodPlay_CSGO_Client
                 }
 
                 MessageBox.Show("成功关闭KAC");
-                
+
             }
             else
             {
