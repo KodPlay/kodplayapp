@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <None Remove="Resources\App\Icon\icon.ico" />
+    <None Remove="Resources\App\Icon\icon.png" />
     <None Remove="Resources\App\Icon\Logo.jpg" />
     <None Remove="Resources\App\Icon\wpfui.png" />
     <None Remove="Resources\App\Index\bg1.png" />
@@ -59,6 +60,7 @@
 
   <ItemGroup>
     <Resource Include="Resources\App\Icon\icon.ico" />
+    <Resource Include="Resources\App\Icon\icon.png" />
     <Resource Include="Resources\App\Icon\Logo.jpg" />
     <Resource Include="Resources\App\Icon\wpfui.png" />
     <Resource Include="Resources\App\Index\bg1.png" />
