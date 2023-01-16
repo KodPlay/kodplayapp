@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/KodPlay-Server/Resources/mod
+/KodPlay-Server/Resources/mod.zip
