@@ -12,31 +12,40 @@ namespace KodPlay_Server.Server.FileSys
     {
    
 
-        private static readonly IFileProvider _physicalFileProvider;// 解析物理文件系统
+        private static  IFileProvider _physicalFileProvider;// 解析物理文件系统
 
-        
 
+
+        // I:\Project\C#\Project\StartClient\KodPlay_CSGO_Clinet\KodPlay-CSGO-Client\KodPlay-Server\bin\Debug\net6.0\
 
         public static void VerificationFolder()
         {
-            var rootPath = "Resource/mod";
-            var fileinfos = _physicalFileProvider.GetDirectoryContents(rootPath);
-            foreach (var fileinfo in fileinfos)
-            {
-                if (fileinfo.IsDirectory)
-                {
-                    var FileMd5 = ConvertStringToMd5(rootPath);
-                    var Fileinfo = TP.Wrapper("GET File Info","名称"+fileinfo.Name,
-                        "##文件大小## "+ fileinfo.Length,
-                                   "##文件MD5## "+ FileMd5,
-                                   "##最后修改时间" + fileinfo.LastModified.ToString(),
-                                   "文件路径 " + fileinfo.PhysicalPath
-                        );
 
-                    //_logger.LogInformation("GET File Info    " + "File Name :"+ fileinfo.Name);
-                    Console.WriteLine(Fileinfo);
-                }
+           
+            DirectoryInfo directoryInfo = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "\\Resource\\mod");
+            FileSystemInfo[] fileSystemInfos = directoryInfo.GetFileSystemInfos("*", SearchOption.AllDirectories);
+            for (int i = 0; i < fileSystemInfos.Length; i++)
+            {
+                var file = fileSystemInfos[i];
+                //Console.WriteLine($"isDir:{file.Attributes == FileAttributes.Directory} name:{file.Name} Path:{file.FullName}");
+                var isDir = file.Attributes == FileAttributes.Directory;
+
+                var FileMd5 = ConvertStringToMd5(file.FullName);
+                var Fileinfo = TP.Wrapper("GET File Info", "名称" + file.Name,
+                                "##文件夹## "+ isDir,
+                               "##文件MD5## " + FileMd5,
+                               "##最后修改时间" + file.LastAccessTime.ToString(),
+                               "文件路径 " + file.FullName
+                    );
+                Console.WriteLine(Fileinfo);
+
+
+
+
             }
+
+
+
         }
 
 
